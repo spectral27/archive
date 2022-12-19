@@ -1,0 +1,45 @@
+Java Command Line
+
+.
+
+Compile 
+
+javac -d bin -cp src src/basepackage/Main.java
+
+Options
+-d bin
+Set the destination directory for class files.
+
+-cp src
+Specify where to find user class files.
+
+source files (src/basepackage/Main.java)
+One or more source files to be compiled.
+
+.
+
+Jar
+
+jar cf main.jar -C bin .
+
+Options
+cf main.jar
+Creates a new archive file named main.jar or to standard output if f and jarfile are omitted.
+
+-C bin .
+Temporarily changes directory during execution of jar command while processing the following input files argument. This command changes to bin directory and adds to main.jar all files within bin directory.
+
+.
+
+Run 
+
+java -cp main.jar basepackage.Main
+
+Options
+-cp main.jar
+Specifies a list of directories, Jar files, Zip archives to search for class files.
+
+basepackage.Main
+The name of the class to be called.
+
+.
